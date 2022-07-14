@@ -1,11 +1,10 @@
-from flask import render_template, redirect, request, url_for, flash
+from flask import render_template, redirect, request, url_for, flash, current_app
 from flask_login import login_user, login_required, logout_user, current_user
 from . import auth
 from ..models import User
-from .forms import LoginForm, RegistrationForm
+from .forms import LoginForm, RegistrationForm, ChangePasswordForm
 from .. import db
 from ..email import send_email
-from manage import app
 
 
 @auth.before_app_request
@@ -58,7 +57,7 @@ def register():
         token = user.generate_confirmation_token()
         send_email(user.email, 'Confirm your account',
                    'auth/email/confirm', user=user, token=token)
-        send_email(app.config['FLASKY_ADMIN'], 'Зарегистрирован новый пользователь',
+        send_email(current_app.config['FLASKY_ADMIN'], 'Зарегистрирован новый пользователь',
                    'auth/email/new_user', user=user)
         flash('A confirmation email has been sent to you by email.')
         return redirect(url_for('auth.login'))
@@ -86,4 +85,20 @@ def resend_confirmation():
                'auth/email/confirm', user=current_user, token=token)
     flash('A new confirmation email has been sent to you by email.')
     return redirect(url_for('main.index'))
+
+
+@auth.route('/change-password', methods=['GET', 'POST'])
+@login_required
+def change_password():
+    form = ChangePasswordForm()
+    if form.validate_on_submit():
+        if current_user.verify_password(form.old_password.data):
+            current_user.password = form.password.data
+            db.session.add(current_user)
+            db.session.commit()
+            flash('Your password has been updated.')
+            return redirect(url_for('main.index'))
+        else:
+            flash('Invalid password.')
+    return render_template("auth/change_password.html", form=form)
 
