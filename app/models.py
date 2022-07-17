@@ -4,6 +4,7 @@ from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask import current_app
 from flask_login import UserMixin, AnonymousUserMixin
 from . import login_manager
+from datetime import datetime
 
 
 class Role(db.Model):
@@ -54,6 +55,11 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean, default=False)
+    name = db.Column(db.String(64))
+    location = db.Column(db.String(64))
+    about_me = db.Column(db.Text())
+    member_since = db.Column(db.DateTime(), default=datetime.utcnow)
+    last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 
     def __init__(self, **kwargs):
@@ -64,6 +70,7 @@ class User(UserMixin, db.Model):
             if self.role is None:
                 self.role = Role.query.filter_by(default=True).first()
 
+    
     def can(self, permissions):
         return self.role is not None and \
                (self.role.permissions & permissions) == permissions
@@ -121,7 +128,6 @@ class User(UserMixin, db.Model):
         return s.dumps(
             {'change_email': self.id, 'new_email': new_email}).decode('utf-8')
 
-     
     def change_email(self, token):
         s = Serializer(current_app.config['SECRET_KEY'])
         try:
@@ -135,7 +141,11 @@ class User(UserMixin, db.Model):
             return False
         self.email = new_email
         db.session.add(self)
-        return True       
+        return True 
+
+    def ping(self)      :
+        self.last_seen = datetime.utcnow()
+        db.session.add(self)
     
     def __repr__(self):
         return '<User %r>' % self.username
