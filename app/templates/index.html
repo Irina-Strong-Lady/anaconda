@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
 
 {% block title %}Flasky{% endblock %}
 
@@ -14,4 +15,15 @@
     {% endif %}
 </div>
 {% include '_posts.html' %}
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.index') }}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/Markdown.Converter.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/Markdown.Sanitizer.js') }}"></script>
 {% endblock %}

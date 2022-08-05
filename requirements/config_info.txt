@@ -1,0 +1,20 @@
+﻿export FLASKY_ADMIN=igontar@mvd.ru
+export MAIL_USERNAME=igontar@mvd.ru
+export MAIL_PASSWORD=
+export MAIL_SERVER=post.mvd.ru
+export MAIL_PORT=587
+
+
+В Git Bash:
+
+nano .bashrc
+# Вносятся изменения
+Ctrl + X (выйти с сохранением)
+Y (подтверждение)
+Enter
+
+Включить переменные окружения:
+$ source ~/.bashrc
+
+Проверить переменную окружения:
+echo $MAIL_PORT
