@@ -1,2 +1,3 @@
 -r common.txt
 ForgeryPy3 @ file:///C:/Users/Ivan/Python/Notebook/Deploy/venv_dependencies/Forgerypy/ForgeryPy3-0.3.1.tar.gz
+Faker @ file:///C:/Users/Ivan/Python/Notebook/Deploy/venv_dependencies/Forgerypy/Faker-13.15.1-py3-none-any.whl

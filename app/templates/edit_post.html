@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky - Edit Post{% endblock %}
+
+{% block page_content %}
+<div class="page_header">
+	<h1>Edit Post</h1>
+</div>
+<div>
+	{{ wtf.quick_form(form) }}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/Markdown.Converter.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/Markdown.Sanitizer.js') }}"></script>
+{% endblock %}
