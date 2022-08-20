@@ -12,6 +12,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     FLASKY_POSTS_PER_PAGE = 20
     FLASKY_FOLLOWERS_PER_PAGE = 20
+    MOMENT_DEFAULT_FORMAT = 'DD.MM.YYYY'
 
     @staticmethod
     def init_app():

@@ -10,6 +10,7 @@
             {% endif %}
         </div>       
         <div class="post-content">
+            <script type="text/javascript" src="{{ url_for('static', filename='js/moment.js') }}"></script>
             <div class="post-date">{{ moment(post.timestamp).fromNow() }}</div>
             <div class="post-author"><a href="{{ url_for('.user', username=post.author.username) }}">{{ post.author.username }}</a></div>
             <div class="post-body">
