@@ -95,6 +95,7 @@ class User(UserMixin, db.Model):
     avatar_hash = db.Column(db.String(32))
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
+    comments = db.relationship('Comment', backref='author', lazy='dynamic')
     followed = db.relationship('Follow',
                                 foreign_keys=[Follow.follower_id],
                                 backref=db.backref('follower', lazy='joined'),
@@ -284,6 +285,7 @@ class Post(db.Model):
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     body_html = db.Column(db.Text)
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    comments = db.relationship('Comment', backref='post', lazy='dynamic')
 
     @staticmethod
     def generate_fake(count=100):
@@ -322,7 +324,7 @@ class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.Text)
     body_html = db.Column(db.Text)
-    timestamp = db.column(db.DateTime, index=True, default=datetime.utcnow)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     disabled = db.Column(db.Boolean)
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
