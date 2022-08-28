@@ -164,14 +164,14 @@ class UserModelTestCase(unittest.TestCase):
         self.assertTrue(u.last_seen > last_seen_before)
 
     def test_gravatar(self):
-        u = User(email='gontar.ivan79@gmail.com', password='nyayfmqdskitmsuc')
+        u = User(email='john@example.com', password='cat')
         with self.app.test_request_context('/'):
             gravatar = u.gravatar()
             gravatar_256 = u.gravatar(size=256)
-            gravatar_pg = u.gravatar(rating= 'pg')
+            gravatar_pg = u.gravatar(rating='pg')
             gravatar_retro = u.gravatar(default='retro')
-        self.assertTrue('https://secure.gravatar.com/avatar/' + 
-                        '211eb357ab4d7216cfd830d850f069b0'in gravatar)
+        self.assertTrue('http://www.gravatar.com/avatar/' +
+                        'd4c74594d841139328695756648b6bd6' in gravatar)
         self.assertTrue('s=256' in gravatar_256)
         self.assertTrue('r=pg' in gravatar_pg)
         self.assertTrue('d=retro' in gravatar_retro)
@@ -192,8 +192,8 @@ class UserModelTestCase(unittest.TestCase):
         self.assertTrue(u1.is_following(u2))
         self.assertFalse(u1.is_followed_by(u2))
         self.assertTrue(u2.is_followed_by(u1))
-        self.assertTrue(u1.followed.count() == 1)
-        self.assertTrue(u2.followers.count() == 1)
+        self.assertTrue(u1.followed.count() == 2)
+        self.assertTrue(u2.followers.count() == 2)
         f = u1.followed.all()[-1]
         self.assertTrue(f.followed == u2)
         self.assertTrue(timestamp_before <= f.timestamp <= timestamp_after)
@@ -202,14 +202,25 @@ class UserModelTestCase(unittest.TestCase):
         u1.unfollow(u2)
         db.session.add(u1)
         db.session.commit()
-        self.assertTrue(u1.followed.count() == 0)
-        self.assertTrue(u2.followers.count() == 0)
-        self.assertTrue(Follow.query.count() == 0)
+        self.assertTrue(u1.followed.count() == 1)
+        self.assertTrue(u2.followers.count() == 1)
+        self.assertTrue(Follow.query.count() == 2)
         u2.follow(u1)
         db.session.add(u1)
         db.session.add(u2)
         db.session.commit()
         db.session.delete(u2)
         db.session.commit()
-        self.assertTrue(Follow.query.count() == 0)
+        self.assertTrue(Follow.query.count() == 1)
+
+    def test_to_json(self):
+        u = User(email='gontar.ivan79@gmail.com', password='swordfish1')
+        db.session.add(u)
+        db.session.commit()
+        with self.app.test_request_context('/'):
+            json_user = u.to_json()
+        expected_keys = ['url', 'username', 'member_since', 'last_seen',
+                         'posts_url', 'followed_posts_url', 'post_count']
+        self.assertEqual(sorted(json_user.keys()), sorted(expected_keys))
+        self.assertEqual('http://localhost/api/v1.0/users/' + str(u.id), json_user['url'])
         

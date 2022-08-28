@@ -18,6 +18,7 @@ class Permission:
     MODERATE = 8
     ADMIN = 16
 
+
 class Role(db.Model):
     __tablename__ = 'roles'
     id = db.Column(db.Integer, primary_key=True)
