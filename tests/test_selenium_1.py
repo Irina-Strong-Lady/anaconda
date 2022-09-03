@@ -26,9 +26,9 @@ class SeleniumTestCase(unittest.TestCase):
             cls.app_context.push()
 
             # Подавить вывод отладочных сообщений, чтобы очистить
-            # вывод от лишнего мусора
-            import logging
-            logger = logging.getLogger('werkzeug')
+            # вывод от лишнего мусора 
+            import logging 
+            logger = logging.getLogger('werkzeug') 
             logger.setLevel("ERROR")
 
             # Создать базу данных и наполнить её фиктивными данными

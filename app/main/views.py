@@ -27,7 +27,7 @@ def server_shutdown():
     shutdown = request.environ.get('werkzeug.server.shutdown')
     if not shutdown:
         abort(505)
-    shutdown()
+    shutdown()    
     return 'Shutting down...'
 
 

@@ -2537,3 +2537,410 @@ JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstr
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1662146241048	geckodriver	INFO	Listening on 127.0.0.1:61987
+1662146244112	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61988" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilehegPSh"
+1662146401267	geckodriver	INFO	Listening on 127.0.0.1:62190
+1662146404296	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62191" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilekObiAr"
+1662146404556	Marionette	INFO	Marionette enabled
+1662146404559	Marionette	INFO	Listening on port 62202
+WebDriver BiDi listening on ws://localhost:62191
+Read port: 62202
+1662146404748	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilekObiAr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62191/devtools/browser/919da314-e132-4e1d-90c6-0240b06508f8
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662146409616	Marionette	INFO	Stopped listening on port 62202
+1662146471653	geckodriver	INFO	Listening on 127.0.0.1:62427
+1662146474712	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62428" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileVCFj4g"
+1662146474964	Marionette	INFO	Marionette enabled
+1662146474968	Marionette	INFO	Listening on port 62439
+WebDriver BiDi listening on ws://localhost:62428
+Read port: 62439
+1662146475160	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileVCFj4g\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62428/devtools/browser/89c3e7f0-0012-425b-befc-ad85180361d9
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662146479868	Marionette	INFO	Stopped listening on port 62439
+1662196130150	geckodriver	INFO	Listening on 127.0.0.1:55062
+1662196133245	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55063" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile6QW0Rh"
+1662196133532	Marionette	INFO	Marionette enabled
+1662196133536	Marionette	INFO	Listening on port 55076
+WebDriver BiDi listening on ws://localhost:55063
+Read port: 55076
+1662196133732	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile6QW0Rh\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55063/devtools/browser/05dd539e-5eac-47ab-9bf3-2fdb25bf4371
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662196138824	Marionette	INFO	Stopped listening on port 55076
+1662196278474	geckodriver	INFO	Listening on 127.0.0.1:55317
+1662196281539	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55318" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileY8W3T7"
+1662196281784	Marionette	INFO	Marionette enabled
+1662196281787	Marionette	INFO	Listening on port 55329
+WebDriver BiDi listening on ws://localhost:55318
+Read port: 55329
+1662196282002	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileY8W3T7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55318/devtools/browser/2de743db-7a9f-47e1-a0cc-6c874309ca58
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662196286973	Marionette	INFO	Stopped listening on port 55329
+1662196503541	geckodriver	INFO	Listening on 127.0.0.1:55592
+1662196506598	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55593" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileIAS4Q3"
+1662196506841	Marionette	INFO	Marionette enabled
+1662196506845	Marionette	INFO	Listening on port 55602
+WebDriver BiDi listening on ws://localhost:55593
+Read port: 55602
+1662196507051	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileIAS4Q3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55593/devtools/browser/0f424ca6-31fd-4ed2-810d-a4920f8a817a
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662196511931	Marionette	INFO	Stopped listening on port 55602
+1662196601961	geckodriver	INFO	Listening on 127.0.0.1:55828
+1662196605026	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55829" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile3PtDNR"
+1662196605270	Marionette	INFO	Marionette enabled
+1662196605273	Marionette	INFO	Listening on port 55842
+WebDriver BiDi listening on ws://localhost:55829
+Read port: 55842
+1662196605467	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile3PtDNR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55829/devtools/browser/57db5b47-9267-46f3-b7fa-6c0a2548506e
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662196610189	Marionette	INFO	Stopped listening on port 55842
+1662196849637	geckodriver	INFO	Listening on 127.0.0.1:56069
+1662196852680	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56070" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileFgMpyd"
+1662196852931	Marionette	INFO	Marionette enabled
+1662196852934	Marionette	INFO	Listening on port 56080
+WebDriver BiDi listening on ws://localhost:56070
+Read port: 56080
+1662196853134	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileFgMpyd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56070/devtools/browser/ffaf1200-cdca-4072-9283-a1db54c8bdc4
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662196857877	Marionette	INFO	Stopped listening on port 56080
+!!! error running onStopped callback: TypeError: callback is not a function
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+1662197067731	geckodriver	INFO	Listening on 127.0.0.1:56224
+1662197070793	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56225" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileRW84MI"
+1662197071043	Marionette	INFO	Marionette enabled
+1662197071046	Marionette	INFO	Listening on port 56234
+WebDriver BiDi listening on ws://localhost:56225
+Read port: 56234
+1662197071241	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileRW84MI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56225/devtools/browser/9d6db941-f8cc-4f2b-9a88-f2feaa8b5b60
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662197076003	Marionette	INFO	Stopped listening on port 56234
+1662197287622	geckodriver	INFO	Listening on 127.0.0.1:56396
+1662197290684	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56397" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileApN8ov"
+1662197290932	Marionette	INFO	Marionette enabled
+1662197290935	Marionette	INFO	Listening on port 56407
+WebDriver BiDi listening on ws://localhost:56397
+Read port: 56407
+1662197291129	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileApN8ov\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56397/devtools/browser/741c7630-ce6a-4c02-a12a-012db187b894
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662197295949	Marionette	INFO	Stopped listening on port 56407
+1662197682544	geckodriver	INFO	Listening on 127.0.0.1:56735
+1662197685594	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56736" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilec8wlhA"
+1662197685844	Marionette	INFO	Marionette enabled
+1662197685848	Marionette	INFO	Listening on port 56745
+WebDriver BiDi listening on ws://localhost:56736
+Read port: 56745
+1662197686039	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilec8wlhA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56736/devtools/browser/f4bb41b7-bf22-4b02-b90f-64067914da5c
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662197690650	Marionette	INFO	Stopped listening on port 56745
+1662197741529	geckodriver	INFO	Listening on 127.0.0.1:56866
+1662197744563	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56867" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile38j5Lu"
+1662197744811	Marionette	INFO	Marionette enabled
+1662197744814	Marionette	INFO	Listening on port 56876
+WebDriver BiDi listening on ws://localhost:56867
+Read port: 56876
+1662197745004	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile38j5Lu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56867/devtools/browser/b26e86e0-55ab-47c5-9ddc-31f3c87ab67e
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662197749904	Marionette	INFO	Stopped listening on port 56876
+1662199959180	geckodriver	INFO	Listening on 127.0.0.1:62307
+1662199962240	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62308" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilecA5hmI"
+1662199962499	Marionette	INFO	Marionette enabled
+1662199962503	Marionette	INFO	Listening on port 62361
+WebDriver BiDi listening on ws://localhost:62308
+Read port: 62361
+1662199962693	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilecA5hmI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62308/devtools/browser/917bdd08-0213-4d1f-8331-20bf79e89d6f
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662199967731	Marionette	INFO	Stopped listening on port 62361
+1662200217249	geckodriver	INFO	Listening on 127.0.0.1:63251
+1662200220270	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63252" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilesMylfb"
+1662200220514	Marionette	INFO	Marionette enabled
+1662200220517	Marionette	INFO	Listening on port 63270
+WebDriver BiDi listening on ws://localhost:63252
+Read port: 63270
+1662200220711	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilesMylfb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63252/devtools/browser/5151bec9-9330-47ab-b213-2c1c7a0438fb
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662200225555	Marionette	INFO	Stopped listening on port 63270
+1662200293554	geckodriver	INFO	Listening on 127.0.0.1:63544
+1662200296593	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63545" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilel1AhRs"
+1662200296840	Marionette	INFO	Marionette enabled
+1662200296843	Marionette	INFO	Listening on port 63562
+WebDriver BiDi listening on ws://localhost:63545
+Read port: 63562
+1662200297032	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilel1AhRs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63545/devtools/browser/f8f31cd8-fcf8-4365-87e2-1f6dcec4c548
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662200301696	Marionette	INFO	Stopped listening on port 63562
+!!! error running onStopped callback: TypeError: callback is not a function
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+[Parent 10880, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1662200468703	geckodriver	INFO	Listening on 127.0.0.1:64362
+1662200471741	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64363" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilejEvvXH"
+1662200471985	Marionette	INFO	Marionette enabled
+1662200471989	Marionette	INFO	Listening on port 64385
+WebDriver BiDi listening on ws://localhost:64363
+Read port: 64385
+1662200472175	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofilejEvvXH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64363/devtools/browser/ec6822a4-d79e-4cdf-880a-8031b9ac8776
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662200476639	Marionette	INFO	Stopped listening on port 64385
+1662200579468	geckodriver	INFO	Listening on 127.0.0.1:65086
+1662200582558	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65087" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileCUpssm"
+1662200582806	Marionette	INFO	Marionette enabled
+1662200582809	Marionette	INFO	Listening on port 65115
+WebDriver BiDi listening on ws://localhost:65087
+Read port: 65115
+1662200582999	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileCUpssm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65087/devtools/browser/22bbea12-b579-48a9-91b4-b9e9be5d7087
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662200587571	Marionette	INFO	Stopped listening on port 65115
+1662200717108	geckodriver	INFO	Listening on 127.0.0.1:49531
+1662200720153	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49532" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileZGWwqE"
+1662200720404	Marionette	INFO	Marionette enabled
+1662200720407	Marionette	INFO	Listening on port 49554
+WebDriver BiDi listening on ws://localhost:49532
+Read port: 49554
+1662200720605	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileZGWwqE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49532/devtools/browser/0202a433-ec2b-4401-850b-0cc321080e4a
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662200725252	Marionette	INFO	Stopped listening on port 49554
+1662200920188	geckodriver	INFO	Listening on 127.0.0.1:50842
+1662200923243	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50843" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileAplQzj"
+1662200923494	Marionette	INFO	Marionette enabled
+1662200923497	Marionette	INFO	Listening on port 50861
+WebDriver BiDi listening on ws://localhost:50843
+Read port: 50861
+1662200923690	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileAplQzj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50843/devtools/browser/c0e4c3b4-8644-433b-8b96-c3d80a9b01b1
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662200928443	Marionette	INFO	Stopped listening on port 50861
+1662201051591	geckodriver	INFO	Listening on 127.0.0.1:51713
+1662201054628	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51714" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileLBwmdO"
+1662201054871	Marionette	INFO	Marionette enabled
+1662201054874	Marionette	INFO	Listening on port 51764
+WebDriver BiDi listening on ws://localhost:51714
+Read port: 51764
+1662201055063	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileLBwmdO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51714/devtools/browser/a61f1caa-8cd2-4607-8e18-ae7898442fe1
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662201062081	Marionette	INFO	Stopped listening on port 51764
+1662201166595	geckodriver	INFO	Listening on 127.0.0.1:52512
+1662201169665	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52513" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileVA1s36"
+1662201169911	Marionette	INFO	Marionette enabled
+1662201169914	Marionette	INFO	Listening on port 52540
+WebDriver BiDi listening on ws://localhost:52513
+Read port: 52540
+1662201170334	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileVA1s36\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52513/devtools/browser/972af4d6-dd67-49b0-9845-bf4f42faa508
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662201178177	Marionette	INFO	Stopped listening on port 52540
+1662201450627	geckodriver	INFO	Listening on 127.0.0.1:54323
+1662201453683	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54324" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile5QXzXd"
+1662201453950	Marionette	INFO	Marionette enabled
+1662201453953	Marionette	INFO	Listening on port 54356
+WebDriver BiDi listening on ws://localhost:54324
+Read port: 54356
+1662201454139	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile5QXzXd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54324/devtools/browser/9b0a667a-601a-4d9e-b139-68cd882d0ab3
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662201459187	Marionette	INFO	Stopped listening on port 54356
+1662201746929	geckodriver	INFO	Listening on 127.0.0.1:56302
+1662201749966	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56303" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile8Ff7fk"
+1662201750212	Marionette	INFO	Marionette enabled
+1662201750216	Marionette	INFO	Listening on port 56347
+WebDriver BiDi listening on ws://localhost:56303
+Read port: 56347
+1662201750424	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile8Ff7fk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56303/devtools/browser/b178964d-4dc5-479d-a9d5-945df0c9a2d9
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662201755256	Marionette	INFO	Stopped listening on port 56347
+1662209740889	geckodriver	INFO	Listening on 127.0.0.1:65032
+1662209743921	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65033" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile0aoqoT"
+1662209744205	Marionette	INFO	Marionette enabled
+1662209744209	Marionette	INFO	Listening on port 65050
+WebDriver BiDi listening on ws://localhost:65033
+Read port: 65050
+1662209744310	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile0aoqoT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65033/devtools/browser/52da8270-d74c-41d6-a47e-75884a8d186b
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662209749183	Marionette	INFO	Stopped listening on port 65050
+1662209850430	geckodriver	INFO	Listening on 127.0.0.1:65282
+1662209853477	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65283" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile1y63ZV"
+1662209853722	Marionette	INFO	Marionette enabled
+1662209853725	Marionette	INFO	Listening on port 65298
+WebDriver BiDi listening on ws://localhost:65283
+Read port: 65298
+1662209853913	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofile1y63ZV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65283/devtools/browser/901f1169-2321-4c1e-a8d8-b155a08a0f7e
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662209858570	Marionette	INFO	Stopped listening on port 65298
+1662216199625	geckodriver	INFO	Listening on 127.0.0.1:56172
+1662216202673	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56173" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileOHBf52"
+1662216203217	Marionette	INFO	Marionette enabled
+1662216203220	Marionette	INFO	Listening on port 56186
+WebDriver BiDi listening on ws://localhost:56173
+Read port: 56186
+1662216203295	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iogon\\AppData\\Local\\Temp\\rust_mozprofileOHBf52\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56173/devtools/browser/5e938f37-eb87-4391-9ddc-b559a1f4d82b
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:5000."
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://localhost:5000/static/bootstrap/jquery.min.js?bootstrap=3.0.3.1, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1662216208212	Marionette	INFO	Stopped listening on port 56186

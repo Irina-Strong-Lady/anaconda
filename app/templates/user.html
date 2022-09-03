@@ -11,7 +11,9 @@
         <p>
             {% if user.name %}{{ user.name }}{% endif %}
             {% if user.location %}
-                <a href="">{{ user.location }}</a>
+               From  <a href="http://maps.google.com/?q={{ user.location }}">
+		    {{ user.location }}
+	       </a>				
             {% endif %}
         </p>
         {% endif %}

@@ -1,8 +1,10 @@
 import os
 from app import create_app, db
 from app.models import User, Role, Post, Follow, Permission, Comment
+from flask_script._compat import text_type
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand
+
 
 COV = None
 if os.environ.get('FLASK_COVERAGE'):

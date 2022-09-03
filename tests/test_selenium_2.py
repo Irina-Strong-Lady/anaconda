@@ -28,9 +28,9 @@ class SeleniumTestCase(unittest.TestCase):
 			cls.app_context = cls.app.app_context()
 			cls.app_context.push()
 
-			# suppress logging to keep unittest output clean
-			import logging
-			logger = logging.getLogger('werkzeug')
+			# suppress logging to keep unittest output clear 
+			import logging 
+			logger = logging.getLogger('werkzeug') 
 			logger.setLevel("ERROR")
 
 			# create the database and populate with some fake data
