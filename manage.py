@@ -1,18 +1,17 @@
 import os
 from app import create_app, db
 from app.models import User, Role, Post, Follow, Permission, Comment
-from flask_script._compat import text_type
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand
 
 
 COV = None
-if os.environ.get('FLASK_COVERAGE'):
+if os.environ.get('ANACONDA_COVERAGE'):
     import coverage
     COV = coverage.coverage(branch=True, include='app/*')
     COV.start()
 
-app = create_app(os.getenv('FLASK_CONFIG') or 'default')
+app = create_app(os.getenv('ANACONDA_CONFIG') or 'default')
 manager = Manager(app)
 migrate = Migrate(app, db)
 
@@ -30,9 +29,9 @@ manager.add_command('db', MigrateCommand)
 @manager.command
 def test(coverage=False):
     """Выполняет модульное тестирование."""
-    if coverage and not os.environ.get('FLASK_COVERAGE'):
+    if coverage and not os.environ.get('ANACONDA_COVERAGE'):
         import sys
-        os.environ['FLASK_COVERAGE'] = '1'
+        os.environ['ANACONDA_COVERAGE'] = '1'
         os.execvp(sys.executable, [sys.executable] + sys.argv)
     import unittest
     tests = unittest.TestLoader().discover('tests')

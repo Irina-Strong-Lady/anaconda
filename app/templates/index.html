@@ -2,12 +2,12 @@
 {% import "bootstrap/wtf.html" as wtf %}
 {% import "_macros.html" as macros %}
 
-{% block title %}Flasky{% endblock %}
+{% block title %}Анаконда{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
-    <h1>Hello, {% if current_user.is_authenticated %}
-    {{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
+    <h1>Приветствуем Вас, {% if current_user.is_authenticated %}
+    {{ current_user.username }}{% else %}незарегистрированный пользователь{% endif %}!</h1>
 </div>
 <div>
     {% if current_user.can(Permission.WRITE) %} 
@@ -18,9 +18,9 @@
     <ul class="nav nav-tabs">
         <li{% if not show_followed %} class="active"{%
         endif %}><a href="{{ url_for('.show_all') }}">
-        All</a></li>
+        Все пользователи</a></li>
         {% if current_user.is_authenticated %}
-        <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_followed') }}">Followed</a></li>
+        <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_followed') }}">Читающие Вас</a></li>
         {% endif %}
     </ul>
     {% include '_posts.html' %}

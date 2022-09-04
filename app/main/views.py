@@ -12,7 +12,7 @@ from ..decorators import admin_required, permission_required
 @main.after_app_request
 def after_request(response):
     for query in get_debug_queries():
-        if query.duration >= current_app.config['FLASKY_SLOW_DB_QUERY_TIME']:
+        if query.duration >= current_app.config['ANACONDA_SLOW_DB_QUERY_TIME']:
             current_app.logger.warning(
                 'Slow query: %s\nParameters: %s\nDuration: %fs\nContext: %s\n'
                 % (query.statement, query.parameters, query.duration,
@@ -49,7 +49,7 @@ def index():
     else:
         query = Post.query
     pagination = query.order_by(Post.timestamp.desc()).paginate(
-        page, per_page=current_app.config['FLASKY_POSTS_PER_PAGE'],
+        page, per_page=current_app.config['ANACONDA_POSTS_PER_PAGE'],
         error_out=False)
     posts = pagination.items
     return render_template('index.html', form=form, posts=posts,
@@ -60,14 +60,14 @@ def index():
 @login_required
 @admin_required
 def for_admins_only():
-    return "For administrators!"
+    return "Для администраторов!"
 
 
 @main.route('/moderator')
 @login_required
 @permission_required(Permission.MODERATE)
 def for_moderators_only():
-    return "For comment moderators!"
+    return "Для комментариев модераторов!"
 
 
 @main.route('/user/<username>')
@@ -77,7 +77,7 @@ def user(username):
     return render_template('user.html', user=user, posts=posts)
 
 
-@main.route('/edit-profile', methods=['GET', 'POST'])
+@main.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
     form = EditProfileForm()
@@ -87,7 +87,7 @@ def edit_profile():
         current_user.about_me = form.about_me.data
         db.session.add(current_user._get_current_object())
         db.session.commit()
-        flash('Your profile has been updated.')
+        flash('Ваш профиль пользователя обновлен')
         return redirect(url_for('.user', username=current_user.username))
     form.name.data = current_user.name 
     form.location.data = current_user.location
@@ -110,7 +110,7 @@ def edit_profile_admin(id):
         user.location = form.location.data
         user.about_me = form.about_me.data
         db.session.add(user)
-        flash('The profile has been updated.')
+        flash('Ваш профиль пользователя обновлен')
         return redirect(url_for('.user', username=user.username))
     form.email.data = user.email
     form.username.data = user.username
@@ -131,14 +131,13 @@ def post(id):
                           post=post,
                           author=current_user._get_current_object())
         db.session.add(comment)
-        flash('Your comment has been published.')
         return redirect(url_for('.post', id=post.id, page=-1))
     page = request.args.get('page', 1, type=int)
     if page == -1:
         page = (post.comments.count() - 1) / \
-            current_app.config['FLASKY_COMMENTS_PER_PAGE'] + 1
+            current_app.config['ANACONDA_COMMENTS_PER_PAGE'] + 1
     pagination = post.comments.order_by(Comment.timestamp.desc()).paginate(
-        page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'],
+        page, per_page=current_app.config['ANACONDA_COMMENTS_PER_PAGE'],
         error_out=False)
     comments = pagination.items
     return render_template('post.html', posts=[post], form=form,
@@ -156,7 +155,7 @@ def edit(id):
     if form.validate_on_submit():
         post.body = form.body.data
         db.session.add(post)
-        flash('The post has been updated.')
+        flash('Ваше сообщение в общем чате обновлено')
         return redirect(url_for('.post', id=post.id))
     form.body.data = post.body
     return render_template('edit_post.html', form=form)
@@ -168,14 +167,14 @@ def edit(id):
 def follow(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash('Invalid user')
+        flash('Пользователя не существует')
         return redirect(url_for('.index'))
     if current_user.is_following(user):
-        flash('You are already following this user.')
+        flash('Вы уже являетесь постоянным читателем данного пользователя')
         return redirect(url_for('.user', username=username))
     current_user.follow(user)
     db.session.commit()
-    flash('You are now following %s.' % username)
+    flash('Теперь Вы постоянный читатель пользователя %s' % username)
     return redirect(url_for('.user', username=username))
 
 
@@ -185,14 +184,14 @@ def follow(username):
 def unfollow(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash('Invalid user.')
+        flash('Пользователя не существует')
         return redirect(url_for('.index'))
     if not current_user.is_following(user):
-        flash('You are not following this user.')
+        flash('Теперь вы постоянный читатель данного пользователя')
         return redirect(url_for('.user', username=username))
     current_user.unfollow(user)
     db.session.commit()
-    flash('You are not following %s anymore.' % username)
+    flash('Вы более не являетесь постоянным читателем пользователя %s ' % username)
     return redirect(url_for('.user', username=username))
 
 
@@ -200,15 +199,15 @@ def unfollow(username):
 def followers(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash('Invalid user.')
+        flash('Пользователя не существует')
         return redirect(url_for('.index'))
     page = request.args.get('page', 1, type=int)
     pagination = user.followers.paginate(
-        page, per_page=current_app.config['FLASKY_FOLLOWERS_PER_PAGE'], 
+        page, per_page=current_app.config['ANACONDA_FOLLOWERS_PER_PAGE'], 
         error_out=False)
     follows = [{'user':item.follower, 'timestamp':item.timestamp} 
                for item in pagination.items]
-    return render_template('followers.html', user=user, title="Followers of", 
+    return render_template('followers.html', user=user, title="Постоянные читатели пользователя", 
                            endpoint='.followers', pagination=pagination, 
                            follows=follows)
 
@@ -217,15 +216,15 @@ def followers(username):
 def followed_by(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash('Invalid user.')
+        flash('Пользователя не существует')
         return redirect(url_for('.index'))
     page = request.args.get('page', 1, type=int)
     pagination = user.followed.paginate(
-        page, per_page=current_app.config['FLASKY_FOLLOWERS_PER_PAGE'],
+        page, per_page=current_app.config['ANACONDA_FOLLOWERS_PER_PAGE'],
         error_out=False)
     follows = [{'user':item.followed, 'timestamp':item.timestamp} 
                for item in pagination.items]
-    return render_template('followers.html', user=user, title="Followed by", 
+    return render_template('followers.html', user=user, title="Постоянно читаемые пользователем", 
                            endpoint='.followed_by', pagination=pagination, 
                            follows=follows)
 
@@ -252,7 +251,7 @@ def show_followed():
 def moderate():
     page = request.args.get('page', 1, type=int)
     pagination = Comment.query.order_by(Comment.timestamp.desc()).paginate(
-        page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'],
+        page, per_page=current_app.config['ANACONDA_COMMENTS_PER_PAGE'],
         error_out=False)
     comments = pagination.items
     return render_template('moderate.html', comments=comments,

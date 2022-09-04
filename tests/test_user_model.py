@@ -37,7 +37,7 @@ class UserModelTestCase(unittest.TestCase):
         u2 = User(password='cat')
         self.assertTrue(u.password_hash != u2.password_hash)
 
-    def teset_valid_confirmation_token(self):
+    def test_valid_confirmation_token(self):
         u = User(password='cat')
         db.session.add(u)
         db.session.commit()
@@ -85,7 +85,7 @@ class UserModelTestCase(unittest.TestCase):
         self.assertTrue(u.change_email(token))        
         self.assertTrue(u.email == 'gontar.irina84@yandex.ru')
 
-    def invalid_email_change_token(self):
+    def test_invalid_email_change_token(self):
         u1 = User(email='gontar.ivan79@mail.ru', password='swordfish1')
         u2 = User(email='gontar.irina84@yandex.ru', password='swordfish')
         db.session.add(u1)        

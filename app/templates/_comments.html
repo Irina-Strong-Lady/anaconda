@@ -4,7 +4,7 @@
 		<div class="comment-thumbnail">
 			{% if comment.author != None %}
 				<a href="{{ url_for('.user', username=comment.author.username) }}">
-					<img class="img-rounded profile-thumbnail" src="{{ comment.author.gravatar(size=40) }}">
+					<img class="img-rounded profile-thumbnail" src="{{ comment.author.avatar(size=40) }}">
 			{% else %}
 				</a>
 			{% endif %}
@@ -16,7 +16,7 @@
 			</a></div>
 			<div class="comment-body">
 				{% if comment.disabled %}
-				<p><i>This comment has been disabled by a moderator.</i></p>
+				<p><i>Данный коммент отключен модератором</i></p>
 				{% endif %}
 				{% if moderate or not comment.disabled %}
 					{% if comment.body_html %}
@@ -29,9 +29,9 @@
 			{% if moderate %}
 				<br>
 				{% if comment.disabled %}
-				<a class="btn btn-default btn-xs" href=" {{ url_for('.moderate_enable', id=comment.id, page=page) }}">Enable</a>
+				<a class="btn btn-default btn-xs" href=" {{ url_for('.moderate_enable', id=comment.id, page=page) }}">Включить</a>
 				{% else %}
-				<a class="btn btn-danger btn-xs" href="{{ url_for('.moderate_disable', id=comment.id, page=page) }}">Disable</a>
+				<a class="btn btn-danger btn-xs" href="{{ url_for('.moderate_disable', id=comment.id, page=page) }}">Отключить</a>
 				{% endif %}
 			{% endif %}
 		</div>

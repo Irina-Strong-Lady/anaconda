@@ -37,7 +37,7 @@ def login():
             if next is None or not next.startswith('/'):
                 next = url_for('main.index')
             return redirect(next)
-        flash('Invalid username or password')
+        flash('Неверное имя пользователя или пароль')
     return render_template('auth/login.html', form=form)
 
 
@@ -45,7 +45,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    flash('You have been logged out.')
+    flash('Вы вышли из Вашего аккаунта')
     return redirect(url_for('main.index'))
 
 
@@ -59,11 +59,11 @@ def register():
         db.session.add(user)
         db.session.commit()
         token = user.generate_confirmation_token()
-        send_email(user.email, 'Confirm your account',
+        send_email(user.email, 'Подтвердите Ваш аккаунт',
                    'auth/email/confirm', user=user, token=token)
-        send_email(current_app.config['FLASKY_ADMIN'], 'Зарегистрирован новый пользователь',
+        send_email(current_app.config['ANACONDA_ADMIN'], 'Зарегистрирован новый пользователь',
                    'auth/email/new_user', user=user)
-        flash('A confirmation email has been sent to you by email.')
+        flash('Письмо с подтверждением направлено на Ваш адрес электронной почты')
         return redirect(url_for('auth.login'))
     return render_template('auth/register.html', form=form)
 
@@ -75,9 +75,9 @@ def confirm(token):
         return redirect(url_for('main.index'))
     if current_user.confirm(token):
         db.session.commit()
-        flash('You have confirmed your account. Thanks!')
+        flash('Вы успешно подтвердили Ваш аккаунт!')
     else:
-        flash('The confirmation link is invalid or has expired.')
+        flash('Подтверждающая ссылка повреждена или истек срок её действия')
     return redirect(url_for('main.index'))
 
 
@@ -85,9 +85,9 @@ def confirm(token):
 @login_required
 def resend_confirmation():
     token = current_user.generate_confirmation_token()
-    send_email(current_user.email, 'Confirm Your Account',
+    send_email(current_user.email, 'Подтвердите Ваш аккаунт',
                'auth/email/confirm', user=current_user, token=token)
-    flash('A new confirmation email has been sent to you by email.')
+    flash('Новое письмо с подтверждением направлено на Ваш адрес электронной почты')
     return redirect(url_for('main.index'))
 
 
@@ -100,10 +100,10 @@ def change_password():
             current_user.password = form.password.data
             db.session.add(current_user)
             db.session.commit()
-            flash('Your password has been updated.')
+            flash('Ваш пароль обновлен')
             return redirect(url_for('main.index'))
         else:
-            flash('Invalid password.')
+            flash('Неверный пароль')
     return render_template("auth/change_password.html", form=form)
 
 
@@ -116,11 +116,10 @@ def password_reset_request():
         user = User.query.filter_by(email=form.email.data.lower()).first()
         if user:
             token = user.generate_reset_token()
-            send_email(user.email, 'Reset Your Password', 
+            send_email(user.email, 'Сброс пароля',
                         'auth/email/reset_password', 
                         user=user, token=token)
-        flash('An email with instruction to reset your password has been '
-              'sent to you.')
+        flash('Инструкция по сбросу Вашего пароля направлена на Ваш адрес электронной почты')
         return redirect(url_for('auth.login'))
     return render_template('auth/reset_password.html', form=form)
 
@@ -134,7 +133,7 @@ def password_reset(token):
     if form.validate_on_submit():
         if User.reset_password(token, form.password.data):
             db.session.commit()
-            flash('Your password has been updated.')
+            flash('Ваш пароль обновлен')
             return redirect(url_for('auth.login'))
         else:
             return redirect(url_for('main.index'))
@@ -149,14 +148,14 @@ def change_email_request():
         if current_user.verify_password(form.password.data):
             new_email = form.email.data.lower()
             token = current_user.generate_email_change_token(new_email)
-            send_email(new_email, 'Confirm your email adress', 
-                        'auth/email/change_email', 
+            send_email(new_email, 'Подтвердите адрес Вашей электронной почты',
+                        'auth/email/change_email',
                         user=current_user, token=token)
-            flash('An email with instruction to confirm your new email '
-                  'address has been sent to you.')
+            flash('Инструкция с порядком подтверждения Вашей новой электронной почты '
+                  'направлена в Ваш адрес')
             return redirect(url_for('main.index'))
         else:
-            flash('Invalid email or password.')
+            flash('Неверные адрес электронной почты или пароль')
     return render_template("auth/change_email.html", form=form)
 
 
@@ -165,9 +164,9 @@ def change_email_request():
 def change_email(token):
     if current_user.change_email(token):
         db.session.commit()
-        flash('Your email address has been updated.')
+        flash('Адрес Вашей электронной почты обновлен')
     else:
-        flash('Invalid request.')
+        flash('Неверный запрос')
     return redirect(url_for('main.index'))
 
 

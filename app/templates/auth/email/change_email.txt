@@ -1,11 +1,11 @@
-Dear {{ user.username }}, 
+Уважаемый {{ user.username }}, 
 
-To confirm your new email address click on the following link:
+Для подтверждения Вашего адреса электронной почты нажмите на ссылку:
 
 {{ url_for('auth.change_email', token=token, _external=True) }}
 
-Sincerely,
+С уважением!
 
-The Flasky Team
+Администрация ресурса "Анаконда"
 
-Note: replies to this email address are not monitored.
+Внимание! Ответы на данный адрес электронной почты не отслеживаются.

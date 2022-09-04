@@ -1,6 +1,8 @@
-export FLASKY_ADMIN=gontar.ivan79@gmail.com
-export MAIL_USERNAME=gontar.ivan79@gmail.com
-export MAIL_PASSWORD=nyayfmqdskitmsuc
-export MAIL_SERVER=smtp.googlemail.com
+export ANACONDA_ADMIN=igontar@mvd.ru
+export MAIL_USERNAME=igontar@mvd.ru
+export MAIL_PASSWORD=#Swordfish100
+export MAIL_SERVER=post.mvd.ru
 export MAIL_PORT=587
-python manage.py runserver -h 192.168.1.98 -p 5000 -d -r
+export DATABASE_URL=postgresql://postgres:swordfish1@localhost/postgres_product
+python manage.py deploy
+waitress-serve --host=10.107.123.131 --port=5000 --url-scheme=http manage:app

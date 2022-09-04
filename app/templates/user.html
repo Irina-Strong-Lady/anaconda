@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}Flasky - {{ user.username }}{% endblock %}
+{% block title %}Анаконда - {{ user.username }}{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
-    <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">
+    {% if user.avatar != None %}
+    <img class="img-rounded profile-thumbnail" src="{{ user.avatar(size=256) }}">
+    {% endif %}
     <div class="profile-header">
         <h1>{{ user.username }}</h1>
         {% if user.name or user.location %}
         <p>
             {% if user.name %}{{ user.name }}{% endif %}
             {% if user.location %}
-               From  <a href="http://maps.google.com/?q={{ user.location }}">
+               <a href="">
 		    {{ user.location }}
 	       </a>				
             {% endif %}
@@ -22,35 +24,35 @@
         {% endif %}
         {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
         <script type="text/javascript" src="{{ url_for('static', filename='js/moment.js') }}"></script>
-        <p> Member since <a href="">{{ moment(user.member_since).format() }}</a> Last seen <a href="">{{ moment(user.last_seen).fromNow() }}</a></p>
-        <p>{{ user.posts.count() }} blog posts.</p>
+        <p> Присоединился <a href="">{{ moment(user.member_since).format() }}</a> был <a href="">{{ moment(user.last_seen).fromNow() }}</a></p>
+        <p>{{ user.posts.count() }} сообщений</p>
         <p>
             {% if current_user.can(Permission.FOLLOW) and user != current_user %}
                 {% if not current_user.is_following(user) %}
-                <a href="{{ url_for('.follow', username=user.username) }}" class="btn btn-primary">Follow</a>
+                <a href="{{ url_for('.follow', username=user.username) }}" class="btn btn-primary">Стать читателем</a>
                 {% else %}
-                <a href="{{ url_for('.unfollow', username=user.username) }}" class="btn btn-default">Unfollow</a>
+                <a href="{{ url_for('.unfollow', username=user.username) }}" class="btn btn-default">Перестать читать</a>
                 {% endif %}
             {% endif %}
-            <a href="{{ url_for('.followers', username=user.username) }}">Followers: <span class="badge">{{ user.followers.count() - 1 }}</span></a>
-            <a href="{{ url_for('.followed_by', username=user.username) }}">Following: <span class="badge">{{ user.followed.count() - 1}}</span>
+            <a href="{{ url_for('.followers', username=user.username) }}">Читающие Вас: <span class="badge">{{ user.followers.count() - 1 }}</span></a>
+            <a href="{{ url_for('.followed_by', username=user.username) }}">Читаемые Вами: <span class="badge">{{ user.followed.count() - 1}}</span>
             </a>
             {% if current_user.is_authenticated and user != current_user and 
             user.is_following(current_user) %}
-                <span class="label label-default">Follows you</span>
+                <span class="label label-default">Читают Вас</span>
             {% endif %}
         </p>
         <p>
             {% if user == current_user %}
-            <a class="btn btn-default" href="{{ url_for('.edit_profile') }}">Edit Profile</a>
+            <a class="btn btn-default" href="{{ url_for('.edit_profile') }}">Редактировать профиль</a>
             {% endif %}
             {% if current_user.is_administrator() %}
-            <a class="btn btn-danger" href="{{ url_for('.edit_profile_admin', id=user.id) }}">Edit Profile [Admin]</a>
+            <a class="btn btn-danger" href="{{ url_for('.edit_profile_admin', id=user.id) }}">Редактировать профиль [Админ]</a>
             {% endif %}
         </p>
     </div>
 </div>
-<h3>Posts by {{ user.username }}</h3>
+<h3>Автор сообщений {{ user.username }}</h3>
 {% include '_posts.html' %}
 {% if pagination %}
 <div class="pagination">
