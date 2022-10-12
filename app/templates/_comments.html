@@ -2,10 +2,17 @@
 	{% for comment in comments %}
 	<li class="comment">
 		<div class="comment-thumbnail">
-			{% if comment.author != None %}
+			{% if comment.author.username != None %}
 				<a href="{{ url_for('.user', username=comment.author.username) }}">
-					<img class="img-rounded profile-thumbnail" src="{{ comment.author.avatar(size=40) }}">
-			{% else %}
+					{% if comment.author.avatar not in files %} 
+						<img class="img-rounded profile-thumbnail" 
+							src="{{ url_for('dropimage.download_avatars', filename='default/' + 'Mens_avatar_3.gif') }}" 
+							width="40" height="auto">
+					{% else %}    
+						<img class="img-rounded profile-thumbnail" 
+							src="{{ url_for('dropimage.download_avatars', filename='avatars/' + comment.author.avatar) }}" 
+							width="40" height="auto">       
+					{% endif %}
 				</a>
 			{% endif %}
 		</div>

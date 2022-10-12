@@ -4,9 +4,17 @@
 
 {% block page_content %}
 <div class="page-header">
-    {% if user.avatar != None %}
-    <img class="img-rounded profile-thumbnail" src="{{ user.avatar(size=256) }}">
+    <div>
+    {% if user.avatar not in files %} 
+        <img class="img-rounded profile-thumbnail" 
+             src="{{ url_for('dropimage.download_avatars', filename='default/' + 'Mens_avatar_3.gif') }}" 
+             style="width: 10%; height: auto;">
+    {% else %}    
+        <img class="img-rounded profile-thumbnail" 
+             src="{{ url_for('dropimage.download_avatars', filename='avatars/' + user.avatar) }}" 
+             style="width: 10%; height: auto;">       
     {% endif %}
+    </div>    
     <div class="profile-header">
         <h1>{{ user.username }}</h1>
         {% if user.name or user.location %}
@@ -43,11 +51,14 @@
             {% endif %}
         </p>
         <p>
+            {% if current_user.is_administrator() %}
+            <a a class="btn btn-danger" href="{{ url_for('.delete_user', id=user.id) }}">Удалить пользователя</a>
+            {% endif %}
             {% if user == current_user %}
             <a class="btn btn-default" href="{{ url_for('.edit_profile') }}">Редактировать профиль</a>
             {% endif %}
             {% if current_user.is_administrator() %}
-            <a class="btn btn-danger" href="{{ url_for('.edit_profile_admin', id=user.id) }}">Редактировать профиль [Админ]</a>
+            <a class="btn btn-primary" href="{{ url_for('.edit_profile_admin', id=user.id) }}">Редактировать профиль [Админ]</a>
             {% endif %}
         </p>
     </div>

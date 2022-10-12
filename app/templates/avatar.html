@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Анаконда - Редактировать профиль{% endblock %}
+
+{% block page_content %}
+<head>
+    <title>Загрузите изображения</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dropzone.min.css') }}">
+</head>
+<body>
+    <h1>Загрузите изображения</h1>
+    <form action="{{ url_for('dropimage.upload_avatars') }}" class="dropzone">
+    </form>
+    <script src="{{ url_for('static', filename='js/dropzone.js') }}"></script>
+</body>
+{% endblock %}

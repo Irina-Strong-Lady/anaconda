@@ -6,6 +6,8 @@
 {% block page_content %}
 <div class="page-header">
 	<h1>Редактировать Ваш профиль</h1>
+	<a class="btn btn-default" href="{{ url_for('dropimage.avatars') }}">Добавить аватар</a>
+
 </div>
 <div class="col-md-4">
 	{{ wtf.quick_form(form) }}

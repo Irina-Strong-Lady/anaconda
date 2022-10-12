@@ -1,4 +1,5 @@
 from flask_wtf import FlaskForm
+from flask_wtf.file import FileAllowed
 from wtforms import StringField, SubmitField, TextAreaField, BooleanField, SelectField,\
     SubmitField, FileField
 from wtforms.validators import DataRequired, Length, Email, Regexp
@@ -16,7 +17,6 @@ class EditProfileForm(FlaskForm):
     name = StringField('Ваши Ф.И.О.', validators=[Length(0, 64)])
     location = StringField('Ваш населенный пункт', validators=[Length(0, 64)])
     about_me = TextAreaField('Обо мне')
-    image = FileField('Загрузите изображение Вашего аватара')
     submit = SubmitField('Отправить')
 
 

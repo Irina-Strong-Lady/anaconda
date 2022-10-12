@@ -13,9 +13,21 @@
 	<tr>
 		<td>
 			<a href="{{ url_for('.user', username = follow.user.username) }}">
-				<img class="img-rounded" src="{{ follow.user.gravatar(size=32) }}">
 				{{ follow.user.username }}
-			</a>
+				<td align="left">
+				{% if follow.user.avatar != None %}
+					{% if follow.user.avatar not in files %} 
+						<img class="img-rounded profile-thumbnail" 
+							src="{{ url_for('dropimage.download_avatars', filename='default/' + 'Mens_avatar_3.gif') }}" 
+							width="20" height="auto">
+					{% else %}    
+						<img class="img-rounded profile-thumbnail" 
+							src="{{ url_for('dropimage.download_avatars', filename='avatars/' + follow.user.avatar) }}"
+							width="20" height="auto">
+					{% endif %} 
+				</td>  
+                {% endif %}
+			</a>			
 		</td>
 		<td>{{ moment(follow.timestamp).format('L') }}</td>
 	</tr>

@@ -9,6 +9,7 @@ import hashlib
 from markdown import markdown
 import bleach
 from app.exceptions import ValidationError
+import imghdr
 
 
 class Permission:
@@ -94,10 +95,10 @@ class User(UserMixin, db.Model):
     about_me = db.Column(db.Text())
     member_since = db.Column(db.DateTime(), default=datetime.utcnow)
     last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
-    avatar = db.Column(db.LargeBinary, nullable=True)
+    avatar = db.Column(db.String(128))
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
-    posts = db.relationship('Post', backref='author', lazy='dynamic')
-    comments = db.relationship('Comment', backref='author', lazy='dynamic')
+    posts = db.relationship('Post', backref='author', lazy='dynamic', cascade='all, delete-orphan')
+    comments = db.relationship('Comment', backref='author', lazy='dynamic', cascade='all, delete-orphan')
     followed = db.relationship('Follow',
                                 foreign_keys=[Follow.follower_id],
                                 backref=db.backref('follower', lazy='joined'),
@@ -147,6 +148,15 @@ class User(UserMixin, db.Model):
                 db.session.commit()
             except IntegrityError:
                 db.session.rollback()
+
+    @staticmethod
+    def validate_image(stream):
+        header = stream.read(512)
+        stream.seek(0)
+        format = imghdr.what(None, header)
+        if not format:
+            return None
+        return '.' + (format if format != 'jpeg' else 'jpg')
     
     def can(self, perm):
         return self.role is not None and self.role.has_permission(perm)

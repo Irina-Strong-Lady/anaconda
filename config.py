@@ -21,6 +21,10 @@ class Config:
     MAIL_PORT = os.environ.get('MAIL_PORT')
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAX_CONTENT_LENGTH = 16 * 1024 * 1024
+    UPLOAD_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.pdf', '.tiff', '.doc', '.docx', '.bmp', '.txt',\
+            '.JPG', '.JPEG', '.PNG', '.GIF', '.PDF', '.TIFF', '.DOC', '.DOCX', '.BMP', '.TXT']
+    UPLOAD_PATH = 'app/dropimage/static'
 
     @staticmethod
     def init_app(app):

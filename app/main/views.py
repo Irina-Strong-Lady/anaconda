@@ -1,5 +1,6 @@
+import os
 from flask import render_template, redirect, url_for, flash, abort, request, \
-    current_app, make_response
+    current_app, make_response, send_from_directory
 from flask_login import login_required, current_user
 from . import main
 from .. import db
@@ -7,6 +8,7 @@ from .forms import NameForm, EditProfileForm, EditProfileAdminForm, PostForm, Co
 from flask_sqlalchemy import get_debug_queries
 from ..models import User, Permission, Role, Post, Comment
 from ..decorators import admin_required, permission_required
+from .. dropimage.validate import create_folder
 
 
 @main.after_app_request
@@ -34,6 +36,7 @@ def server_shutdown():
 @main.route('/', methods=['GET', 'POST'])
 def index():
     form = PostForm()
+    files = os.listdir(create_folder())    
     if current_user.can(Permission.WRITE) and form.validate_on_submit():
         post = Post(body=form.body.data, 
                     author=current_user._get_current_object())
@@ -53,7 +56,7 @@ def index():
         error_out=False)
     posts = pagination.items
     return render_template('index.html', form=form, posts=posts,
-                           show_followed=show_followed, pagination=pagination)
+                           show_followed=show_followed, pagination=pagination, files=files)
 
 
 @main.route('/admin')
@@ -74,13 +77,16 @@ def for_moderators_only():
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     posts = user.posts.order_by(Post.timestamp.desc()).all()
-    return render_template('user.html', user=user, posts=posts)
+    files = os.listdir(create_folder())
+    return render_template('user.html', user=user, posts=posts, files=files)
 
 
 @main.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
     form = EditProfileForm()
+    files = os.listdir(create_folder())
+
     if form.validate_on_submit():
         current_user.name = form.name.data
         current_user.location = form.location.data
@@ -92,10 +98,10 @@ def edit_profile():
     form.name.data = current_user.name 
     form.location.data = current_user.location
     form.about_me.data = current_user.about_me
-    return render_template('edit_profile.html', form=form)       
+    return render_template('edit_profile.html', form=form, files=files)
 
 
-@main.route('/edit-profile/<int:id>', methods=['GET', 'POST'])
+@main.route('/edit_profile/<int:id>', methods=['GET', 'POST'])
 @login_required
 @admin_required
 def edit_profile_admin(id):
@@ -126,6 +132,7 @@ def edit_profile_admin(id):
 def post(id):
     post = Post.query.get_or_404(id)
     form = CommentForm()
+    files = os.listdir(create_folder())
     if form.validate_on_submit():
         comment = Comment(body=form.body.data,
                           post=post,
@@ -141,12 +148,13 @@ def post(id):
         error_out=False)
     comments = pagination.items
     return render_template('post.html', posts=[post], form=form,
-                           comments=comments, pagination=pagination)
+                           comments=comments, pagination=pagination, files=files)
 
 
 @main.route('/edit/<int:id>', methods=['GET', 'POST'])
 @login_required
 def edit(id):
+    files = os.listdir(create_folder())
     post = Post.query.get_or_404(id)
     if current_user != post.author and \
             not current_user.can(Permission.ADMIN):
@@ -158,7 +166,7 @@ def edit(id):
         flash('Ваше сообщение в общем чате обновлено')
         return redirect(url_for('.post', id=post.id))
     form.body.data = post.body
-    return render_template('edit_post.html', form=form)
+    return render_template('edit_post.html', form=form, files=files)
 
 
 @main.route('/follow/<username>')
@@ -197,6 +205,7 @@ def unfollow(username):
 
 @main.route('/followers/<username>')
 def followers(username):
+    files = os.listdir(create_folder())
     user = User.query.filter_by(username=username).first()
     if user is None:
         flash('Пользователя не существует')
@@ -209,11 +218,12 @@ def followers(username):
                for item in pagination.items]
     return render_template('followers.html', user=user, title="Постоянные читатели пользователя", 
                            endpoint='.followers', pagination=pagination, 
-                           follows=follows)
+                           follows=follows, files=files)
 
 
 @main.route('/followed_by/<username>')
 def followed_by(username):
+    files = os.listdir(create_folder())
     user = User.query.filter_by(username=username).first()
     if user is None:
         flash('Пользователя не существует')
@@ -226,7 +236,7 @@ def followed_by(username):
                for item in pagination.items]
     return render_template('followers.html', user=user, title="Постоянно читаемые пользователем", 
                            endpoint='.followed_by', pagination=pagination, 
-                           follows=follows)
+                           follows=follows, files=files)
 
 
 @main.route('/all')
@@ -249,13 +259,14 @@ def show_followed():
 @login_required
 @permission_required(Permission.MODERATE)
 def moderate():
+    files = os.listdir(create_folder())
     page = request.args.get('page', 1, type=int)
     pagination = Comment.query.order_by(Comment.timestamp.desc()).paginate(
         page, per_page=current_app.config['ANACONDA_COMMENTS_PER_PAGE'],
         error_out=False)
     comments = pagination.items
     return render_template('moderate.html', comments=comments,
-                           pagination=pagination, page=page)
+                           pagination=pagination, page=page, files=files)
 
 
 @main.route('/moderate/enable/<int:id>')
@@ -279,3 +290,14 @@ def moderate_disable(id):
     db.session.commit()
     return redirect(url_for('.moderate',
                             page=request.args.get('page', 1, type=int)))
+
+
+@main.route('/delete_user/<int:id>')
+@login_required
+@admin_required
+def delete_user(id):
+    user = User.query.get_or_404(id)
+    db.session.delete(user)
+    db.session.commit()
+    flash(f'Пользователь { user.username } удален')
+    return redirect(url_for('.index'))
